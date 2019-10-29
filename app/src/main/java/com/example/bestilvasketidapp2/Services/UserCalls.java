@@ -33,9 +33,9 @@ public class UserCalls extends MainActivity {
                 @Override
                 public void onResponse(Call<DTO_User> call, Response<DTO_User> response) {
                     if (response == null)
-                        Toast.makeText(UserCalls.this, "User not found!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "User not found!", Toast.LENGTH_LONG).show();
                     else
-                        Toast.makeText(UserCalls.this, "Welcome " + response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Welcome " + response, Toast.LENGTH_LONG).show();
                     //FillDataSheet(response.body());
                     //textView.setText("Found " + response.body().getName());
                 }
